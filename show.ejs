@@ -1,0 +1,29 @@
+<!-- views/book/show.ejs -->
+<h1>
+    <%= book.title %>
+</h1>
+<div class="book-details">
+    <p><strong>Author:</strong>
+        <%= book.author %>
+    </p>
+    <p><strong>Genre:</strong>
+        <%= book.genre %>
+    </p>
+    <p><strong>Description:</strong>
+        <%= book.description %>
+    </p>
+    <p><strong>ISBN:</strong>
+        <%= book.isbn %>
+    </p>
+    <p><strong>Publisher:</strong>
+        <%= book.publisher %>
+    </p>
+    <p><strong>Published Date:</strong>
+        <%= book.publishedDate.toDateString() %>
+    </p>
+</div>
+
+<!-- Button to read book -->
+<form action="/books/<%= book.id %>/read" method="POST">
+    <button type="submit">Read Book</button>
+</form>

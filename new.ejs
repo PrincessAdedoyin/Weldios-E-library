@@ -1,0 +1,24 @@
+<h1>Add a New Book</h1>
+<form action="/books/new" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" required>
+
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" required>
+
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+    </select>
+
+    <button type="submit">Add Book</button>
+</form>

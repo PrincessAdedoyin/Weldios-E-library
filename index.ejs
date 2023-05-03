@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Library - Books</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1>Books</h1>
+    <% if (books.length> 0) { %>
+        <ul class="book-list">
+            <% books.forEach(function(book) { %>
+                <li>
+                    <a href="/book/<%= book._id %>">
+                        <img src="<%= book.coverImage %>">
+                        <div class="book-details">
+                            <h2>
+                                <%= book.title %>
+                            </h2>
+                            <p>
+                                <%= book.author %>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
+        <% } else { %>
+            <p>No books found.</p>
+            <% } %>
+
+                <a href="/book/new" class="button">Add New Book</a>
+
+                <script src="/js/script.js"></script>
+</body>
+
+</html>
